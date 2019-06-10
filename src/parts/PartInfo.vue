@@ -12,7 +12,7 @@
 export default {
   name: 'PartInfo',
   created() {
-    this.$store.dispatch('getParts');
+    this.$store.dispatch('robots/getParts');
   },
   props: {
     partType: { type: String },
@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     parts() {
-      return this.$store.state.parts;
+      return this.$store.state.robots.parts;
     },
     part() {
       const { partType, id } = this;
